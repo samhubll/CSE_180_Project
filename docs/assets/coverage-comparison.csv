@@ -1,0 +1,10 @@
+plan,min_range_m,max_range_m,waypoints,sample_spacing_m,target_set,visible_samples,total_samples,visibility_percent,gap_area_m2,min_goal_clearance_m
+minimum3_route45,3,8,45,0.15,all_known_free,56360,56912,99.030,12.4200,0.743
+minimum3_route45,3,8,45,0.15,reachable_safe,46066,46231,99.643,3.7125,0.743
+minimum3_route45,3,8,45,0.15,edge_or_disconnected,10294,10681,96.377,8.7075,0.743
+baseline_minimum3_2_route49,3.2,8,49,0.15,all_known_free,56268,56912,98.868,14.4900,0.743
+baseline_minimum3_2_route49,3.2,8,49,0.15,reachable_safe,45984,46231,99.466,5.5575,0.743
+baseline_minimum3_2_route49,3.2,8,49,0.15,edge_or_disconnected,10284,10681,96.283,8.9325,0.743
+final_minimum3_2_route52,3.2,8,52,0.15,all_known_free,56528,56912,99.325,8.6400,0.451716
+final_minimum3_2_route52,3.2,8,52,0.15,reachable_safe,46178,46231,99.885,1.1925,0.451716
+final_minimum3_2_route52,3.2,8,52,0.15,edge_or_disconnected,10350,10681,96.901,7.4475,0.451716

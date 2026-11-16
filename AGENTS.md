@@ -46,3 +46,11 @@ only after observing the stated behavior and record unverified work honestly.
 MRTP Navigator's header is at
 `/MRTP/MRTP/src/navigation/include/navigation/navigation.hpp`. Its methods
 spin internally, so consider executor ownership before integrating a mission.
+
+# Version control
+
+The user authorizes committing and pushing project changes after each completed
+unit of work. Commit all project changes in logical order, including source,
+documentation and concise validation evidence. Respect `.gitignore` for raw
+logs, model weights and generated build files. Push the current branch to its
+configured remote after committing.
