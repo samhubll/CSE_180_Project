@@ -3,7 +3,7 @@
 <package format="3">
   <name>search</name>
   <version>0.0.0</version>
-  <description>C++ warehouse-search starter with MRTP Navigator, camera, detections and TF2 connections.</description>
+  <description>C++ timestamp-matched person localization and confirmed map markers; autonomous mission pending.</description>
   <maintainer email="student@ucmerced.edu">CSE 180 Student</maintainer>
   <license>Apache-2.0</license>
 
@@ -21,6 +21,7 @@
   <depend>navigation</depend>
 
   <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_cmake_gtest</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
   <export>

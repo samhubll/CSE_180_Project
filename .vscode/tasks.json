@@ -46,7 +46,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Run search starter",
+      "label": "Run stationary perception",
       "type": "process",
       "command": "/bin/bash",
       "args": ["${workspaceFolder}/scripts/project.sh", "search"],
