@@ -1,0 +1,47 @@
+{
+  "terminal.integrated.profiles.linux": {
+    "ROS 2 Jazzy": {
+      "path": "/bin/bash",
+      "args": ["--init-file", "${workspaceFolder}/scripts/interactive.bash"]
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "ROS 2 Jazzy",
+  "terminal.integrated.profiles.windows": {
+    "ROS 2 Jazzy": {
+      "path": "powershell.exe",
+      "args": [
+        "-NoLogo",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\.vscode\\Open-RosTerminal.ps1"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "ROS 2 Jazzy",
+  "terminal.integrated.cwd": "${workspaceFolder}/../..",
+  "python.defaultInterpreterPath": "/opt/cse180-project-venv/bin/python",
+  "cmake.configureOnOpen": false,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.venv": true,
+    "**/build": true,
+    "**/install": true,
+    "**/log": true
+  },
+  "search.exclude": {
+    "**/.git/**": true,
+    "**/.venv/**": true,
+    "**/build/**": true,
+    "**/install/**": true,
+    "**/log/**": true
+  },
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/.venv/**": true,
+    "**/build/**": true,
+    "**/install/**": true,
+    "**/log/**": true
+  }
+}

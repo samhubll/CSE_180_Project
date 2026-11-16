@@ -1,0 +1,5 @@
+# Install the paired CPU PyTorch wheels first; see scripts/setup-detector.sh.
+ultralytics==8.3.228
+numpy==1.26.4
+opencv-python==4.11.0.86
+cffi==1.17.1

@@ -1,0 +1,82 @@
+{
+  "version": "2.0.0",
+  "options": {
+    "cwd": "${workspaceFolder}/../.."
+  },
+  "presentation": {
+    "reveal": "always",
+    "panel": "dedicated",
+    "focus": true,
+    "clear": false,
+    "showReuseMessage": false
+  },
+  "tasks": [
+    {
+      "label": "Build project",
+      "type": "process",
+      "command": "/bin/bash",
+      "args": ["${workspaceFolder}/scripts/project.sh", "build"],
+      "windows": {
+        "command": "powershell.exe",
+        "args": ["-NoLogo", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}\\.vscode\\Run-Task.ps1", "build"]
+      },
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "Start warehouse + RViz",
+      "type": "process",
+      "command": "/bin/bash",
+      "args": ["${workspaceFolder}/scripts/project.sh", "warehouse"],
+      "windows": {
+        "command": "powershell.exe",
+        "args": ["-NoLogo", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}\\.vscode\\Run-Task.ps1", "warehouse"]
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run detector",
+      "type": "process",
+      "command": "/bin/bash",
+      "args": ["${workspaceFolder}/scripts/project.sh", "detector"],
+      "windows": {
+        "command": "powershell.exe",
+        "args": ["-NoLogo", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}\\.vscode\\Run-Task.ps1", "detector"]
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run search starter",
+      "type": "process",
+      "command": "/bin/bash",
+      "args": ["${workspaceFolder}/scripts/project.sh", "search"],
+      "windows": {
+        "command": "powershell.exe",
+        "args": ["-NoLogo", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}\\.vscode\\Run-Task.ps1", "search"]
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "List ROS topics",
+      "type": "process",
+      "command": "/bin/bash",
+      "args": ["${workspaceFolder}/scripts/project.sh", "topics"],
+      "windows": {
+        "command": "powershell.exe",
+        "args": ["-NoLogo", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}\\.vscode\\Run-Task.ps1", "topics"]
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Drive robot with keyboard",
+      "type": "process",
+      "command": "/bin/bash",
+      "args": ["${workspaceFolder}/scripts/project.sh", "teleop"],
+      "windows": {
+        "command": "powershell.exe",
+        "args": ["-NoLogo", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}\\.vscode\\Run-Task.ps1", "teleop"]
+      },
+      "problemMatcher": []
+    }
+  ]
+}
