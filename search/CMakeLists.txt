@@ -37,6 +37,7 @@ install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_cmake_gtest REQUIRED)
+  find_package(nlohmann_json REQUIRED)
   ament_add_gtest(test_perception test/test_perception.cpp)
   target_link_libraries(test_perception perception)
   ament_target_dependencies(test_perception tf2 tf2_ros tf2_geometry_msgs)
@@ -48,6 +49,14 @@ if(BUILD_TESTING)
   add_executable(validation_motion test/validation_motion.cpp)
   ament_target_dependencies(validation_motion rclcpp rclcpp_action geometry_msgs navigation)
   install(TARGETS validation_motion DESTINATION lib/${PROJECT_NAME})
+  add_executable(range_probe test/range_probe.cpp)
+  target_link_libraries(range_probe perception nlohmann_json::nlohmann_json)
+  ament_target_dependencies(range_probe
+    rclcpp geometry_msgs sensor_msgs vision_msgs tf2 tf2_ros tf2_geometry_msgs)
+  install(TARGETS range_probe DESTINATION lib/${PROJECT_NAME})
+  add_executable(validation_initial_pose test/validation_initial_pose.cpp)
+  ament_target_dependencies(validation_initial_pose rclcpp geometry_msgs)
+  install(TARGETS validation_initial_pose DESTINATION lib/${PROJECT_NAME})
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
   # comment the line when a copyright and license is added to all source files
